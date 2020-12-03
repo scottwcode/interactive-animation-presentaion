@@ -10,7 +10,6 @@ body {
 
 hp-content {
   display: flex;
-  /* background-color: #f00; */
   background-color: #fff;
 
   width: 100vw;
@@ -34,23 +33,17 @@ hp-presentation > hp-slide.active {
 hp-presentation {
   display: block;
   background-color: #fff;
-
   width: 80vmin;
   height: 80vmin;
-
   border: 0.2em solid #000;
   border-radius: 1em;
 }
 
 hp-slide {
   display: inline-block;
-  /* background-color: #0f0; */
-
   width: 80%;
   height: 80%;
-
   margin: 10%;
-
   font-size: 8vmin;
   font-weight: bold;
   font-family: sans-serif;
@@ -68,6 +61,10 @@ hp-chooser {
   align-items: center;
 }
 
+hp-chooser.fixed {
+  height: auto;
+}
+
 hp-chooser * {
   max-width: 20%;
 
@@ -76,6 +73,25 @@ hp-chooser * {
 
 hp-chooser.chosen > *.chosen {
   max-width: 30%;
+}
+
+hp-chooser.fixed > *.chosen {
+  max-width: 50%;
+  animation-name: chosen_fixed;
+  animation-duration: 0.5s;
+}
+
+@keyframes chosen_fixed {
+  from {
+    max-width: 30%;
+  }
+
+  to {
+    max-width: 50%;
+  }
+}
+
+hp-chooser.chosen.animate > *.chosen {
   animation-name: chosen;
   animation-duration: 0.5s;
   animation-timing-function: ease;
@@ -94,9 +110,30 @@ hp-chooser.chosen > *.chosen {
 hp-chooser.chosen > *:not(.chosen) {
   /* 16.6% * 3 (not chosen) = 50% + 30% (chosen) = 80% + 20% (for margins) = 100% */
   max-width: 16.6%;
+  opacity: 0.25;
+}
+
+hp-chooser.fixed > *:not(.chosen) {
+  /* 16.6% * 3 (not chosen) = 50% + 30% (chosen) = 80% + 20% (for margins) = 100% */
+  max-width: 0%;
+  opacity: 0.25;
+  animation-name: unchosen_fixed;
+  animation-duration: 0.5s;
+}
+
+@keyframes unchosen_fixed {
+  from {
+    max-width: 16.6%;
+  }
+
+  to {
+    max-width: 0%;
+  }
+}
+
+hp-chooser.chosen.animate > *:not(.chosen) {
   animation-name: unchosen;
   animation-duration: 0.5s;
-  opacity: 0.25;
   animation-timing-function: linear;
 }
 

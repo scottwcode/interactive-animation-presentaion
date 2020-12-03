@@ -27,9 +27,10 @@
           </hp-chooser>
           <hp-title>doesn't belong?</hp-title>
        </hp-slide>
-        <hp-slide>
+       <!-- Auto advance at 3500 ms -->
+        <hp-slide data-autoadvance="3500"> 
           <hp-title>Which Image</hp-title>
-          <hp-chooser class="chosen">
+          <hp-chooser class="chosen animate">
             <img src="images/triangle.svg"/>
             <img class="chosen" src="images/circle.svg"/>
             <img src="images/square.svg"/>
@@ -37,6 +38,17 @@
             <img src="images/diamond.svg"/>
           </hp-chooser>
           <hp-title>doesn't belong?</hp-title>
+       </hp-slide>
+        <hp-slide>
+          <hp-title>How did</hp-title>
+          <hp-chooser class="fixed">
+            <img src="images/triangle.svg"/>
+            <img class="chosen" src="images/circle.svg"/>
+            <img src="images/square.svg"/>
+            <!-- <img src="images/rectangle.svg"/> -->
+            <img src="images/diamond.svg"/>
+          </hp-chooser>
+          <hp-title>you know?</hp-title>
        </hp-slide>
       </hp-presentation>
     </hp-content>

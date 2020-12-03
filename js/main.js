@@ -17,5 +17,14 @@ function handlePresentationClick(e) {
   if (next) {
     current.classList.remove('active')
     next.classList.add('active');
+
+    var aa= parseInt(next.getAttribute('data-autoadvance'));
+
+    // If aa not is not a number
+    if(!isNaN(aa)) {
+      setTimeout(function (e) {
+        handlePresentationClick(e);
+      }, aa)
+    }
   }
 }
