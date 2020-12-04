@@ -76,6 +76,7 @@ function startLearning(learningDelay) {
       showLearning();
 
       // Continue to show slides at an increasing rate
+      // learningDelay = Math.pow(learningDelay, 1/1.05);
       learningDelay = Math.pow(learningDelay, 1/1.05);
       startLearning(learningDelay);
     }
