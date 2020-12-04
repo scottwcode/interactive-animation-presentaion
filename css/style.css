@@ -148,3 +148,33 @@ hp-chooser.chosen.animate > *:not(.chosen) {
     opacity: 0.25;
   }
 }
+
+hp-learn {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+hp-learn hp-learn-no,
+hp-learn hp-learn-yes {
+  max-width: 20%;
+}
+
+hp-learn img {
+  max-width: 50%;
+  transition-property: margin;
+  transition-duration: 0.5s;
+}
+
+hp-learn.match img {
+  margin-top: 5%;
+  margin-right: 14%;
+}
+
+hp-learn-no,
+hp-learn-yes {
+  display: none;
+}
