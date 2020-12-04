@@ -178,3 +178,18 @@ hp-learn-no,
 hp-learn-yes {
   display: none;
 }
+
+#tfo hp-title {
+  opacity: 0;
+  animation-name: tfo;
+  animation-duration: 2s;
+}
+
+@keyframes tfo {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
