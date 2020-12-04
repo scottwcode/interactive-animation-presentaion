@@ -31,7 +31,6 @@ hp-presentation > hp-slide {
 }
 
 hp-presentation > hp-slide.active {
-  /* display: inline-block; */
   display: flex;
 }
 
@@ -45,7 +44,6 @@ hp-presentation {
 }
 
 hp-slide {
-  /* display: inline-block; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -124,7 +122,6 @@ hp-chooser.chosen > *:not(.chosen) {
 }
 
 hp-chooser.fixed > *:not(.chosen) {
-  /* 16.6% * 3 (not chosen) = 50% + 30% (chosen) = 80% + 20% (for margins) = 100% */
   max-width: 0%;
   opacity: 0.25;
   animation-name: unchosen_fixed;
@@ -154,6 +151,7 @@ hp-chooser.chosen.animate > *:not(.chosen) {
   }
 
   to {
+    /* 16.6% * 3 (not chosen) = 50% + 30% (chosen) = 80% + 20% (for margins) = 100% */
     max-width: 16.6%;
     opacity: 0.25;
   }
