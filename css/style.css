@@ -220,3 +220,8 @@ path {
   stroke: #0f0;
   stroke-width: 1.5vmin;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+}

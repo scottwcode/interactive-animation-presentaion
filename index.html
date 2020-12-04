@@ -22,32 +22,32 @@
             <img src="images/circle.svg"/>
             <img src="images/square.svg"/>
             <!-- <img src="images/rectangle.svg"/> -->
-            <img src="images/diamond.svg"/>
+            <img src="images/rectangle.svg"/>
           </hp-chooser>
           <hp-title>doesn't belong?</hp-title>
        </hp-slide>
-        <hp-slide data-autoadvance="3500"> 
-          <hp-title>Which Image</hp-title>
+        <hp-slide data-autoadvance="4500"> 
+          <hp-title>This one</hp-title>
           <hp-chooser class="chosen animate">
             <img src="images/triangle.svg"/>
             <img class="chosen" src="images/circle.svg"/>
             <img src="images/square.svg"/>
-            <img src="images/diamond.svg"/>
+            <img src="images/rectangle.svg"/>
           </hp-chooser>
-          <hp-title>doesn't belong?</hp-title>
+          <hp-title>because it's different</hp-title>
        </hp-slide>
         <hp-slide data-autoadvance="animationend">
-          <hp-title>How did</hp-title>
+          <hp-title>How can</hp-title>
           <hp-chooser class="fixed">
             <img src="images/triangle.svg"/>
             <img class="chosen" src="images/circle.svg"/>
             <img src="images/square.svg"/>
-            <img src="images/diamond.svg"/>
+            <img src="images/rectangle.svg"/>
           </hp-chooser>
           <hp-title>you know?</hp-title>
        </hp-slide>
-        <hp-slide data-autoadvance="1500">
-          <hp-title>How did</hp-title>
+        <hp-slide data-autoadvance="2500">
+          <hp-title>How can</hp-title>
           <hp-learn class="match">
             <hp-learn-no>no</hp-learn-no>
             <img src="images/circle.svg" />
@@ -56,7 +56,7 @@
           <hp-title>you know?</hp-title>
        </hp-slide>
         <hp-slide id="tfo" data-autoadvance="animationend">
-          <hp-title>How did</hp-title>
+          <hp-title>How can</hp-title>
           <hp-learn>
             <hp-learn-no>no</hp-learn-no>
             <img src="images/circle.svg" />
@@ -64,7 +64,7 @@
           </hp-learn>
           <hp-title>you know?</hp-title>
        </hp-slide>
-        <hp-slide data-autoadvance="1500">
+        <hp-slide data-autoadvance="2500">
           <hp-title>Answer: By</hp-title>
           <hp-learn>
             <hp-learn-no>no</hp-learn-no>
@@ -73,7 +73,7 @@
           </hp-learn>
           <hp-title>learning.</hp-title>
        </hp-slide>
-        <hp-slide data-onshow="runLearningSequence" data-autoadvance="7000">
+        <hp-slide data-onshow="runLearningSequence" data-autoadvance="8000">
           <hp-title>Answer: By</hp-title>
           <hp-learn>
             <hp-learn-no>no</hp-learn-no>
@@ -82,17 +82,29 @@
           </hp-learn>
           <hp-title>learning.</hp-title>
        </hp-slide>
-       <hp-slide data-onshow="animateSVG">
+       <hp-slide data-onshow="animateSVG" style="text-align:center">
+         <!-- <hp-title>The End.</hp-title> -->
+         <hp-title>Learning's the best.</hp-title>
+          <div class=".container">
          <!-- Here's where you can paste an svg to end the slides -->
-        <!-- <svg class="hidden" id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400"
-          height="396.56160458452723" viewBox="0, 0, 400,396.56160458452723">
-          </svg>
-          <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400"
-          height="396.56160458452723" viewBox="0, 0, 400,396.56160458452723">
-                  </svg> -->
-          <hp-title>The End.</hp-title>
-          <br>
-          <hp-title>Hope you keep learning!</hp-title>
+        <svg width="210" height="210" xmlns="http://www.w3.org/2000/svg">
+           <g> <title>Layer 1</title>
+            <circle r="100" cy="105" cx="105" stroke-width="10" stroke="#2b9777" fill="none" id="imagebot_2"/>
+           </g>
+          <metadata>image/svg+xmlOpenclipartblue circle2010-08-28T11:30:40blue circlehttps://openclipart.org/detail/82549/blue-circle-by-mireillemireillebluecircle</metadata>
+        </svg>
+        <!-- <svg width="210" height="210" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <title>Layer 1</title>
+            <circle r="100" cy="105" cx="105" stroke-width="10" stroke="#2b9777" fill="none" id="imagebot_2" />
+          </g>
+          <metadata>image/svg+xmlOpenclipartblue circle2010-08-28T11:30:40blue
+              circlehttps://openclipart.org/detail/82549/blue-circle-by-mireillemireillebluecircle</metadata>
+        </svg> -->
+          </div>
+        <hp-title>The End.</hp-title>
+          <!-- <br>
+          <hp-title>Hope you keep learning!</hp-title> -->
        </hp-slide>
       </hp-presentation>
     </hp-content>

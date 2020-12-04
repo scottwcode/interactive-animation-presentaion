@@ -56,7 +56,7 @@ function setLearnImage(imageName) {
   }
 }
 
-var shapes = ['circle', 'diamond', 'square', 'triangle'];
+var shapes = ['circle', 'rectangle', 'square', 'triangle'];
 
 function showLearning() {
   var ii = Math.floor(Math.random() * shapes.length);
