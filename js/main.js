@@ -51,7 +51,9 @@ function handleAnimationEnd(e) {
 function setLearnImage(imageName) {
   var img = document.querySelector('hp-slide.active hp-learn img');
 
-  img.src = 'images/' + imageName + '.svg';
+  if (img) {
+    img.src = 'images/' + imageName + '.svg';
+  }
 }
 
 var shapes = ['circle', 'diamond', 'square', 'triangle'];
@@ -82,4 +84,27 @@ function startLearning(learningDelay) {
 
 function runLearningSequence() {
   startLearning(1500);
+}
+
+function animateSVGstep () {
+  var slide = document.querySelector('hp-slide.active')
+  var svgs = slide.querySelectorAll('svg');
+
+  if (svgs[0].children.length > 0) {
+    var el = svgs[0].children[0];
+
+    if (el) {
+      svgs[1].appendChild(el.parentNode.removeChild(el));
+    }
+
+    return true;
+  }
+
+  return false;
+}
+
+function animateSVG () {
+  if (animateSVGstep()) {
+    setTimeout(animateSVG, 30);
+  }
 }

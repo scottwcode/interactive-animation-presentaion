@@ -8,6 +8,10 @@ body {
   padding: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 hp-content {
   display: flex;
   background-color: #fff;
@@ -27,7 +31,8 @@ hp-presentation > hp-slide {
 }
 
 hp-presentation > hp-slide.active {
-  display: inline-block;
+  /* display: inline-block; */
+  display: flex;
 }
 
 hp-presentation {
@@ -40,7 +45,12 @@ hp-presentation {
 }
 
 hp-slide {
-  display: inline-block;
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+
   width: 80%;
   height: 80%;
   margin: 10%;
@@ -202,4 +212,11 @@ hp-learn-yes {
   to {
     opacity: 0;
   }
+}
+
+/* For code below to work for svg, need to remove style attribs in svg too */
+path {
+  fill: none;
+  stroke: #0f0;
+  stroke-width: 1.5vmin;
 }
