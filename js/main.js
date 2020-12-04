@@ -30,6 +30,12 @@ function handlePresentationClick(e) {
         handlePresentationClick(e);
       }, aa)
     }
+    
+    var osa = next.getAttribute('data-onshow');
+    if (osa) {
+      window[osa]();
+    }
+
   }
 }
 
@@ -40,4 +46,8 @@ function handleAnimationEnd(e) {
   if (aa == 'animationend' && slide.classList.contains('active')) {
     handlePresentationClick(e);
   }
+}
+
+function runLearningSequence() {
+  console.log("in runLearningSequence");
 }

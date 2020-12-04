@@ -10,9 +10,8 @@
 
     <link rel="stylesheet" href="css/style.css?v=1.0">
 
-
-
   </head>
+
   <body>
     <hp-content>
       <hp-presentation>
@@ -65,7 +64,16 @@
           </hp-learn>
           <hp-title>you know?</hp-title>
        </hp-slide>
-        <hp-slide>
+        <hp-slide data-autoadvance="1500">
+          <hp-title>You</hp-title>
+          <hp-learn>
+            <hp-learn-no>no</hp-learn-no>
+            <img src="images/circle.svg" />
+            <hp-learn-yes>yes</hp-learn-yes>
+          </hp-learn>
+          <hp-title>learned.</hp-title>
+       </hp-slide>
+        <hp-slide data-onshow="runLearningSequence">
           <hp-title>You</hp-title>
           <hp-learn>
             <hp-learn-no>no</hp-learn-no>
@@ -78,4 +86,5 @@
     </hp-content>
     <script src="js/main.js"></script>
   </body>
+
   </html>
